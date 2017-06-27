@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.whir.webplatform.loggon.po.LogonErrorPO" table="security_logoin_error" lazy="false" schema="EZOFFICE">
+<id name="loginid" column="login_id" type="java.lang.Long">
+<generator class="native" />
+</id>
+<property name="userAccount" column="userAccount"/>
+<property name="errornum" column="errornum"/>
+<property name="lasterrornum" column="lasterrornum"/>
+<property name="loginip" column="login_ip"/>
+<property name="logindate" column="login_date"/>
+<property name="updatedate" column="update_date"/>
+</class>
+</hibernate-mapping>

@@ -19,3 +19,27 @@
 3、删除服务端缓存文件夹d:\ezwebapp\work
 
 4、启动evo+服务，验证系统功能
+
+
+
+
+
+
+1、OA先打上12.1.0.1-12.1.0.3补丁
+
+2、停evo+服务
+
+3、备份生产环境程序
+
+4、覆盖产品补丁包至evo+安装目录中d:\ezwebapp
+
+5、修改文件d:\ezwebapp\webapps\defaultroot\WEB-INF\classes\hibernate.cfg.xml,新增如下配置(勿重复添加）
+<mapping resource="com/whir/webplatform/manage/po/WeixinToken.hbm.xml"/>
+<mapping resource="com/whir/webplatform/loggon/po/LogonErrorPO.hbm.xml"/>
+
+6、删除服务端缓存文件夹d:\ezwebapp\work
+
+7、启动evo+服务，验证系统功能
+
+
+
