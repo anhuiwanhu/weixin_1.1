@@ -163,6 +163,7 @@
 			url: url,
 			dataType: "text",
 			success: function(data) {
+				loading = false;
 				//用于打开详情页时区分收件、发件
 				detailType = "receive";
 				sessionStorage.setItem("detailType",detailType);
@@ -292,6 +293,7 @@
 			url: url,
 			dataType: "text",
 			success: function(data) {
+				loading = false;
 				//用于打开详情页时区分收件、发件
 				detailType = "send";
 				sessionStorage.setItem("detailType",detailType);
@@ -521,7 +523,7 @@
 			if(detailType == "receive"){
 				var lastIndex = $$('#receive li').length;
 				setTimeout(function() {
-					loading = false;
+					
 					if (lastIndex >= count1) {
 						// 加载完毕，则注销无限加载事件，以防不必要的加载
 				        //myApp.detachInfiniteScroll($$('#sectionScroll'));
@@ -542,7 +544,7 @@
 				//alert("lastIndex---》"+lastIndex);
 				//alert("count2---------->"+count2);
 				setTimeout(function() {
-					loading = false;
+					
 					if (lastIndex >= count2) {
 						// 加载完毕，则注销无限加载事件，以防不必要的加载
 				        //myApp.detachInfiniteScroll($$('#sectionScroll'));
