@@ -57,3 +57,44 @@
 4、覆盖产品补丁包至evo+安装目录中d:\ezwebapp
 
 5、清服务端缓存，启动evo+服务，验证系统功能
+
+
+
+
+
+
+
+
+
+补丁适用范围：
+
+ezOFFICE12.1产品（已集成补丁12.1.0.05）+ evo+1.1(已集成补丁1.1.3)
+
+操作步骤：
+
+1、停evo+服务
+
+2、备份生产环境程序
+
+3、覆盖产品补丁包至evo+安装目录中d:\ezwebapp
+
+4、修改文件d:\ezwebapp\webapps\defaultroot\WEB-INF\web.xml,删除以下代码：
+
+
+<servlet>
+		<servlet-name>QuartzInitializer</servlet-name>
+		<display-name>Quartz Initializer Servlet</display-name>
+		<servlet-class>org.quartz.ee.servlet.QuartzInitializerServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+		<init-param>
+			<param-name>config-file</param-name>
+			<param-value>/quartz.properties</param-value>
+		</init-param>
+		<init-param>
+			<param-name>shutdown-on-unload</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		
+</servlet>
+
+5、清服务端缓存，启动evo+服务，验证系统功能
