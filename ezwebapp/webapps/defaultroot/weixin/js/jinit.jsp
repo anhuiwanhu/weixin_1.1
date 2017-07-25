@@ -100,7 +100,7 @@ if(request.getAttribute("javax.servlet.forward.query_string")!=null)
 <script>
 	wx.config({
       debug: false,
-      appId: '<%=session.getAttribute("corpid")%>',
+      appId: '<%=session.getAttribute("WeixinCorpId")%>',
       timestamp: <%=ret_weixin.get("timestamp")%>,
       nonceStr: '<%=ret_weixin.get("nonceStr")%>',
       signature: '<%=ret_weixin.get("signature")%>',
